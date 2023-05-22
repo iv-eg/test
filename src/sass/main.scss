@@ -1,0 +1,79 @@
+@import './block/nullstyle.scss';
+@import './block/header.scss';
+//@import url('https://fonts.googleapis.com/css2?family=Inter&family=Open+Sans&family=Oswald&display=swap');
+@font-face {
+    font-family: 'Inter';
+    src: url('/font/Inter-VariableFont_slnt\,wght.eot');
+    src: url('/font/Inter-VariableFont_slnt\,wght.ttf');
+    src: url('/font/Inter-VariableFont_slnt\,wght.woff');
+    src: url('/font/Inter-VariableFont_slnt\,wght.woff2');
+}
+@font-face {
+    font-family: 'Open Sans';
+    src: url('/font/OpenSans-VariableFont_wdth\,wght.eot');
+    src: url('/font/OpenSans-VariableFont_wdth\,wght.ttf');
+    src: url('/font/OpenSans-VariableFont_wdth\,wght.woff');
+    src: url('/font/OpenSans-VariableFont_wdth\,wght.woff2');
+}
+@font-face {
+    font-family: 'Oswald';
+    src: url('/font/Oswald-VariableFont_wght.eot');
+    src: url('/font/Oswald-VariableFont_wght.ttf');
+    src: url('/font/Oswald-VariableFont_wght.woff');
+    src: url('/font/Oswald-VariableFont_wght.woff2');
+}
+body.lock {
+    overflow: hidden;
+}
+.container {
+    display: grid;
+    grid-template: minmax(232px, auto) auto auto / 1fr;
+    grid-template-areas: 
+    'header'
+    'main'
+    'footer';
+    @media (max-width: 768px) {
+        grid-template: minmax(540px, auto) auto auto / 1fr;
+    }
+}
+header{
+    grid-area: header;
+}
+main{
+    grid-area: main;
+}
+footer{
+    grid-area: footer;
+}
+.title{
+    font-family: 'Oswald';
+    line-height: 145%;
+    text-transform: uppercase;
+    color: #FFFFFF;
+
+    white-space: nowrap;
+    @media (max-width: 1081px) {
+        font-size: 23px;
+    }
+    @media (max-width: 768px) {
+        font-size: 28px;
+    }
+}
+.text{
+    font-family: 'Inter';
+    font-size: 15px;
+    line-height: 145%;
+    //text-align: right;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.7);
+    @media (max-width: 768px) {
+        font-size: 13px;
+    }
+
+    //white-space: nowrap;
+}
+.menu-btn {
+    width: 33px;
+    height: 33px;
+    filter: blur(0.1px);
+}
